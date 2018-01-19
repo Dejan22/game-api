@@ -1,0 +1,12 @@
+[{
+  "name":"Player 1",
+  "email": "p1@test.com",
+  "password": "123123a",
+  "symbol": "X"
+},
+{
+  "name":"Player 2",
+  "email": "p2@test.com",
+  "password": "123123a",
+  "symbol": "O"
+}]

@@ -1,7 +1,7 @@
 // routes/games.js
 const router = require('express').Router()
 const passport = require('../config/auth')
-const { Game } = require('../models')
+const { Game, User } = require('../models')
 const utils = require('../lib/utils')
 
 const authenticate = passport.authorize('jwt', { session: false })
@@ -31,8 +31,9 @@ module.exports = io => {
       const newGame = {
         userId: req.account._id,
         players: [{
-          userId: req.account._id,
-          pairs: []
+          userId: req.account._id
+          // symbol: User.find(req.account.userId).symbol
+          // pairs: []
         }]
 
         // grid: new Array(9)

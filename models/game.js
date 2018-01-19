@@ -14,7 +14,7 @@ const { Schema } = mongoose
 // });
 
 const playerSchema = new Schema({
-  userId: { type: Schema.Types.ObjectId, ref: 'users' },
+  userId: { type: Schema.Types.ObjectId, ref: 'users' }
   // pairs: [String],
 });
 

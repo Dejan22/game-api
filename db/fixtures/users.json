@@ -1,12 +1,10 @@
 [{
   "name":"Player 1",
   "email": "p1@test.com",
-  "password": "123123a",
-  "symbol": "X"
+  "password": "123123a"
 },
 {
   "name":"Player 2",
   "email": "p2@test.com",
-  "password": "123123a",
-  "symbol": "O"
+  "password": "123123a"
 }]

@@ -4,14 +4,14 @@ const { User } = require('../models')
 const passport = require('../config/auth')
 
 router.post('/users', (req, res, next) => {
-  User.register(new User({name: req.body.name, email: req.body.email}), req.body.password, (err, user) => {
+  User.register(new User({name: req.body.name, email: req.body.email, symbol: req.body.symbol}), req.body.password, (err, user) => {
     if (err) {
       err.status = 422
       return next(err)
     }
 
-    const { name, email, _id, createdAt, updatedAt } = user
-    res.status(201).send({ name, email, _id, createdAt, updatedAt })
+    const { name, email, _id, createdAt, updatedAt, symbol } = user
+    res.status(201).send({ name, email, _id, createdAt, updatedAt, symbol })
   })
 })
 
